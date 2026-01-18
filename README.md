@@ -165,9 +165,10 @@ EEUU/
 
 - **HTML5:** Estructura semántica moderna
 - **CSS3:** Variables CSS, Flexbox, Grid
-- **JavaScript:** Interactividad (opcional)
+- **JavaScript:** Interactividad y mapas dinámicos
 - **FontAwesome 6.0:** Iconografía vectorial
-- **Google Maps Embed API:** Mapas interactivos
+- **Leaflet 1.9.4:** Mapas interactivos (CDN)
+- **Google Maps Embed API:** Mapas embebidos
 - **Google Fonts:** Tipografía 'Inter' para mejor legibilidad
 
 ### Diseño y UI/UX
@@ -214,11 +215,62 @@ Este proyecto web sirve como:
 
 ## 🔧 Instalación y Uso
 
+### Opción 1: Visualización Local
+
 1. **Clonar o descargar** el repositorio
 2. **Abrir** `index.html` en cualquier navegador moderno
 3. **Navegar** entre las páginas usando el menú superior o los botones de navegación
 4. **Visualizar** mapas, imágenes y detalles de cada día
 5. **Añadir documentación:** Guardar PDFs de reservas en las carpetas correspondientes
+
+### Opción 2: Publicar en GitHub Pages
+
+#### Paso 1: Crear repositorio en GitHub
+
+1. Ir a [github.com](https://github.com) e iniciar sesión
+2. Crear un nuevo repositorio público (ej: `usa-trip-2025`)
+3. **No** inicializar el repositorio con README, .gitignore o licencia
+
+#### Paso 2: Subir el proyecto
+
+Si **no** tienes Git configurado en el proyecto:
+
+```bash
+cd d:\Personal\EEUU
+git init
+git add .
+git commit -m "Initial commit: USA Trip blog"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git push -u origin main
+```
+
+Si **ya** tienes Git configurado:
+
+```bash
+cd d:\Personal\EEUU
+git add .
+git commit -m "Preparado para GitHub Pages"
+git push
+```
+
+#### Paso 3: Activar GitHub Pages
+
+1. En tu repositorio de GitHub, ve a **Settings** → **Pages**
+2. En "Source", selecciona:
+   - **Branch:** `main`
+   - **Folder:** `/ (root)`
+3. Haz clic en **Save**
+4. Espera 1-2 minutos mientras GitHub procesa el sitio
+5. GitHub te proporcionará una URL como: `https://TU_USUARIO.github.io/TU_REPOSITORIO`
+
+#### Paso 4: Verificar el sitio
+
+1. Visita la URL proporcionada por GitHub Pages
+2. Prueba la navegación entre páginas
+3. Verifica que los mapas interactivos funcionen correctamente
+
+> **Nota:** Si el repositorio se llama `TU_USUARIO.github.io`, la URL será directamente `https://TU_USUARIO.github.io` (sin necesidad de especificar el nombre del repositorio).
 
 ## 📝 Notas Importantes
 
