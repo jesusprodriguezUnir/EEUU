@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viaje EEUU 2025 - Montañas Rusas y Cataratas</title>
+    <title>Viaje EEUU 2026 - Montañas Rusas y Cataratas</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,7 +19,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <i class="fas fa-flag-usa"></i>
-                <span>USA Trip 2025</span>
+                <span>USA Trip 2026</span>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Inicio</a>
@@ -60,7 +60,7 @@
             </a>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1546436836-07a910ec9dc8?q=80&w=2574&auto=format&fit=crop"
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                 alt="USA Road Trip" />
         </div>
     </section>
@@ -73,7 +73,7 @@
                 <div class="trip-card">
                     <i class="fas fa-calendar-alt"></i>
                     <h3>Fechas</h3>
-                    <p>23 Julio - 4 Agosto, 2025</p>
+                    <p>29 Julio - 10 Agosto, 2026</p>
                 </div>
                 <div class="trip-card">
                     <i class="fas fa-map-marked-alt"></i>
@@ -86,6 +86,8 @@
                     <p>Familia y Amigos</p>
                 </div>
             </div>
+            <!-- Mapa Global de la Ruta -->
+            <div id="map" class="overview-map"></div>
         </div>
     </section>
 
@@ -96,19 +98,8 @@
 
             <!-- Barra de progreso acumulada de kilómetros -->
             <div class="trip-progress-container">
-                <div class="trip-progress-bar">
-                    <!-- Approx segments -->
-                    <span class="progress-segment day1" style="width:2%" title="Día 1: 0 km"></span>
-                    <span class="progress-segment day2" style="width:14%" title="Día 2: 350 km"></span>
-                    <span class="progress-segment day3" style="width:0%" title="Día 3: 0 km"></span>
-                    <span class="progress-segment day4" style="width:11%" title="Día 4: 270 km"></span>
-                    <span class="progress-segment day5" style="width:19%" title="Día 5: 480 km"></span>
-                    <span class="progress-segment day6" style="width:17%" title="Día 6: 430 km"></span>
-                    <span class="progress-segment day7" style="width:0%" title="Día 7: 0 km"></span>
-                    <span class="progress-segment day8" style="width:12%" title="Día 8: 300 km"></span>
-                    <span class="progress-segment day9" style="width:14%" title="Día 9: 360 km"></span>
-                    <span class="progress-segment day10" style="width:10%" title="Día 10: 260 km"></span>
-                    <span class="progress-segment day11" style="width:0%" title="Día 11: 0 km"></span>
+                <div class="trip-progress-bar" id="trip-progress-bar">
+                    <!-- Segments will be loaded dynamically -->
                 </div>
                 <div class="trip-progress-labels">
                     <span>0 km</span>
@@ -125,11 +116,11 @@
                         <div class="day-card">
                             <div class="day-header">
                                 <span class="day-number">Día 1</span>
-                                <span class="day-date">23 Julio</span>
+                                <span class="day-date">29 Julio</span>
                                 <span class="flag-icon" title="USA"><i class="fas fa-plane-arrival"></i></span>
                             </div>
-                            <h3>Llegada a Newark</h3>
-                            <p>Aterrizaje en Newark, recogida del coche de alquiler y preparación para la aventura.</p>
+                            <h3>Llegada a Boston</h3>
+                            <p>Aterrizaje en Logan Airport. Recogida del coche y primer contacto con Massachusetts.</p>
                             <div class="day-stats">
                                 <span><i class="fas fa-road"></i> 20 km</span>
                                 <span><i class="fas fa-clock"></i> 1 hora</span>
@@ -143,17 +134,17 @@
                 <div class="timeline-item" data-day="2">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card">
+                        <div class="day-card featured">
                             <div class="day-header">
                                 <span class="day-number">Día 2</span>
-                                <span class="day-date">24 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-car-side"></i></span>
+                                <span class="day-date">30 Julio</span>
+                                <span class="flag-icon"><i class="fas fa-university"></i></span>
                             </div>
-                            <h3>Newark → Boston</h3>
-                            <p>Rumbo al norte hacia Nueva Inglaterra. Tarde en Boston disfrutando de Lobster Rolls.</p>
+                            <h3>Boston al Completo</h3>
+                            <p>Freedom Trail, Harvard y la historia de la independencia.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 350 km</span>
-                                <span><i class="fas fa-clock"></i> 4.5 horas</span>
+                                <span><i class="fas fa-road"></i> 0 km</span>
+                                <span><i class="fas fa-clock"></i> Todo el día</span>
                             </div>
                             <a href="day2.html" class="day-link">Ver detalles</a>
                         </div>
@@ -164,17 +155,17 @@
                 <div class="timeline-item" data-day="3">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card featured">
+                        <div class="day-card">
                             <div class="day-header">
                                 <span class="day-number">Día 3</span>
-                                <span class="day-date">25 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-university"></i></span>
+                                <span class="day-date">31 Julio</span>
+                                <span class="flag-icon"><i class="fas fa-tree"></i></span>
                             </div>
-                            <h3>Explorando Boston</h3>
-                            <p>Día completo en Boston: Freedom Trail, Harvard University y Beacon Hill.</p>
+                            <h3>Boston → Albany</h3>
+                            <p>Ruta escénica a través de los Berkshires.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 0 km</span>
-                                <span><i class="fas fa-clock"></i> Todo el día</span>
+                                <span><i class="fas fa-road"></i> 275 km</span>
+                                <span><i class="fas fa-clock"></i> 3 horas</span>
                             </div>
                             <a href="day3.html" class="day-link">Ver detalles</a>
                         </div>
@@ -185,17 +176,17 @@
                 <div class="timeline-item" data-day="4">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card">
+                        <div class="day-card featured">
                             <div class="day-header">
                                 <span class="day-number">Día 4</span>
-                                <span class="day-date">26 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-tree"></i></span>
+                                <span class="day-date">1 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-water"></i></span>
                             </div>
-                            <h3>Boston → Albany</h3>
-                            <p>Ruta escénica hacia el estado de Nueva York. Parada recomendada en Stockbridge.</p>
+                            <h3>Albany → Cataratas del Niágara</h3>
+                            <p>Llegada a una de las maravillas naturales del mundo. Barco Maid of the Mist.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 270 km</span>
-                                <span><i class="fas fa-clock"></i> 3 horas</span>
+                                <span><i class="fas fa-road"></i> 475 km</span>
+                                <span><i class="fas fa-clock"></i> 5 horas</span>
                             </div>
                             <a href="day4.html" class="day-link">Ver detalles</a>
                         </div>
@@ -206,17 +197,17 @@
                 <div class="timeline-item" data-day="5">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card featured">
+                        <div class="day-card">
                             <div class="day-header">
                                 <span class="day-number">Día 5</span>
-                                <span class="day-date">27 Julio</span>
+                                <span class="day-date">2 Agosto</span>
                                 <span class="flag-icon"><i class="fas fa-water"></i></span>
                             </div>
-                            <h3>Albany → Cataratas del Niágara</h3>
-                            <p>Llegada a una de las maravillas naturales del mundo. Barco Maid of the Mist.</p>
+                            <h3>Niágara → Sandusky</h3>
+                            <p>Bordeando el Lago Erie hacia Ohio. Tarde de relax junto al lago.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 480 km</span>
-                                <span><i class="fas fa-clock"></i> 5 horas</span>
+                                <span><i class="fas fa-road"></i> 400 km</span>
+                                <span><i class="fas fa-clock"></i> 4.5 horas</span>
                             </div>
                             <a href="day5.html" class="day-link">Ver detalles</a>
                         </div>
@@ -227,17 +218,17 @@
                 <div class="timeline-item" data-day="6">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card">
+                        <div class="day-card featured">
                             <div class="day-header">
                                 <span class="day-number">Día 6</span>
-                                <span class="day-date">28 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-water"></i></span>
+                                <span class="day-date">3 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-rocket"></i></span>
                             </div>
-                            <h3>Niágara → Sandusky</h3>
-                            <p>Bordeando el Lago Erie hacia Ohio. Tarde de relax junto al lago.</p>
+                            <h3>Cedar Point</h3>
+                            <p>¡El plato fuerte! La capital mundial de las montañas rusas. Adrenalina pura.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 430 km</span>
-                                <span><i class="fas fa-clock"></i> 4.5 horas</span>
+                                <span><i class="fas fa-road"></i> 0 km</span>
+                                <span><i class="fas fa-clock"></i> Todo el día</span>
                             </div>
                             <a href="day6.html" class="day-link">Ver detalles</a>
                         </div>
@@ -248,17 +239,17 @@
                 <div class="timeline-item" data-day="7">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card featured">
+                        <div class="day-card">
                             <div class="day-header">
                                 <span class="day-number">Día 7</span>
-                                <span class="day-date">29 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-rocket"></i></span>
+                                <span class="day-date">4 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-city"></i></span>
                             </div>
-                            <h3>Cedar Point</h3>
-                            <p>¡El plato fuerte! La capital mundial de las montañas rusas. Adrenalina pura.</p>
+                            <h3>Sandusky → Pittsburgh</h3>
+                            <p>La Ciudad de Acero. Vistas increíbles desde el Monte Washington.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 0 km</span>
-                                <span><i class="fas fa-clock"></i> Todo el día</span>
+                                <span><i class="fas fa-road"></i> 300 km</span>
+                                <span><i class="fas fa-clock"></i> 3.5 horas</span>
                             </div>
                             <a href="day7.html" class="day-link">Ver detalles</a>
                         </div>
@@ -272,14 +263,14 @@
                         <div class="day-card">
                             <div class="day-header">
                                 <span class="day-number">Día 8</span>
-                                <span class="day-date">30 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-industry"></i></span>
+                                <span class="day-date">5 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-hat-cowboy"></i></span>
                             </div>
-                            <h3>Sandusky → Pittsburgh</h3>
-                            <p>La Ciudad de Acero. Vistas increíbles desde el Monte Washington.</p>
+                            <h3>Pittsburgh → Lancaster</h3>
+                            <p>Adentrándonos en el territorio Amish. Granjas y cultura tradicional.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 300 km</span>
-                                <span><i class="fas fa-clock"></i> 3.5 horas</span>
+                                <span><i class="fas fa-road"></i> 370 km</span>
+                                <span><i class="fas fa-clock"></i> 4 horas</span>
                             </div>
                             <a href="day8.html" class="day-link">Ver detalles</a>
                         </div>
@@ -290,17 +281,17 @@
                 <div class="timeline-item" data-day="9">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="day-card">
+                        <div class="day-card featured">
                             <div class="day-header">
                                 <span class="day-number">Día 9</span>
-                                <span class="day-date">31 Julio</span>
-                                <span class="flag-icon"><i class="fas fa-horse-head"></i></span>
+                                <span class="day-date">6 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-history"></i></span>
                             </div>
-                            <h3>Pittsburgh → Lancaster</h3>
-                            <p>Adentrándonos en el territorio Amish. Granjas y cultura tradicional.</p>
+                            <h3>Lancaster → NYC</h3>
+                            <p>Parada en Philadelphia para ver la Liberty Bell y llegada a Nueva York.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 360 km</span>
-                                <span><i class="fas fa-clock"></i> 4 horas</span>
+                                <span><i class="fas fa-road"></i> 270 km</span>
+                                <span><i class="fas fa-clock"></i> 3.5 horas</span>
                             </div>
                             <a href="day9.html" class="day-link">Ver detalles</a>
                         </div>
@@ -314,37 +305,79 @@
                         <div class="day-card">
                             <div class="day-header">
                                 <span class="day-number">Día 10</span>
-                                <span class="day-date">1 Agosto</span>
-                                <span class="flag-icon"><i class="fas fa-city"></i></span>
+                                <span class="day-date">7 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-building"></i></span>
                             </div>
-                            <h3>Lancaster → NYC</h3>
-                            <p>Pasando por Filadelfia (Rocky Steps) hasta llegar a la Gran Manzana.</p>
+                            <h3>NYC: Modernidad</h3>
+                            <p>Hudson Yards, High Line y Chelsea Market. La cara más nueva de Manhattan.</p>
                             <div class="day-stats">
-                                <span><i class="fas fa-road"></i> 260 km</span>
-                                <span><i class="fas fa-clock"></i> 3 horas</span>
+                                <span><i class="fas fa-road"></i> 0 km</span>
+                                <span><i class="fas fa-clock"></i> Todo el día</span>
                             </div>
                             <a href="day10.html" class="day-link">Ver detalles</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Día 11-13 NYC -->
+                <!-- Día 11 -->
                 <div class="timeline-item" data-day="11">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="day-card">
+                            <div class="day-header">
+                                <span class="day-number">Día 11</span>
+                                <span class="day-date">8 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-torch"></i></span>
+                            </div>
+                            <h3>NYC: Lady Liberty</h3>
+                            <p>Estatua de la Libertad, Wall Street y Puente de Brooklyn.</p>
+                            <div class="day-stats">
+                                <span><i class="fas fa-road"></i> 0 km</span>
+                                <span><i class="fas fa-clock"></i> Todo el día</span>
+                            </div>
+                            <a href="day11.html" class="day-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Día 12 -->
+                <div class="timeline-item" data-day="12">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="day-card featured">
                             <div class="day-header">
-                                <span class="day-number">Días 11-13</span>
-                                <span class="day-date">2-4 Agosto</span>
-                                <span class="flag-icon"><i class="fas fa-statue-of-liberty"></i></span>
+                                <span class="day-number">Día 12</span>
+                                <span class="day-date">9 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-tree"></i></span>
                             </div>
-                            <h3>Nueva York</h3>
-                            <p>Explorando Manhattan, Estatua de la Libertad, Times Square y Central Park.</p>
+                            <h3>NYC: Central Park</h3>
+                            <p>Domingo en el parque, Top of the Rock y despedida en Times Square.</p>
                             <div class="day-stats">
                                 <span><i class="fas fa-road"></i> 0 km</span>
-                                <span><i class="fas fa-clock"></i> 3 Días</span>
+                                <span><i class="fas fa-clock"></i> Todo el día</span>
                             </div>
-                            <a href="day11.html" class="day-link">Ver detalles</a>
+                            <a href="day12.html" class="day-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Día 13 -->
+                <div class="timeline-item" data-day="13">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="day-card">
+                            <div class="day-header">
+                                <span class="day-number">Día 13</span>
+                                <span class="day-date">10 Agosto</span>
+                                <span class="flag-icon"><i class="fas fa-plane-departure"></i></span>
+                            </div>
+                            <h3>Regreso</h3>
+                            <p>Últimas compras y vuelo de vuelta desde Newark.</p>
+                            <div class="day-stats">
+                                <span><i class="fas fa-road"></i> 20 km</span>
+                                <span><i class="fas fa-clock"></i> -</span>
+                            </div>
+                            <a href="day13.html" class="day-link">Ver detalles</a>
                         </div>
                     </div>
                 </div>
@@ -359,7 +392,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <i class="fas fa-flag-usa"></i>
-                    <span>USA Trip 2025</span>
+                    <span>USA Trip 2026</span>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Inicio</a>
@@ -368,7 +401,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 USA Trip. Todos los derechos reservados.</p>
+                <p>&copy; 2026 USA Trip. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -377,7 +410,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- Script personalizado -->
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

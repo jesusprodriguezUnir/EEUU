@@ -2,12 +2,12 @@
 
 ## 📋 Descripción General
 
-Este proyecto web documenta la agenda de viaje por la Costa Este de Estados Unidos. Es una aplicación web desarrollada en HTML y CSS que presenta un itinerario detallado de 13 días (del 23 de julio al 4 de agosto de 2025) centrada en ciudades históricas, maravillas naturales y, sobre todo, parques de atracciones de primer nivel.
+Este proyecto web documenta la agenda de viaje por la Costa Este de Estados Unidos. Es una aplicación web desarrollada en HTML y CSS que presenta un itinerario detallado de 13 días (del 23 de julio al 4 de agosto de 2026) centrada en ciudades históricas, maravillas naturales y, sobre todo, parques de atracciones de primer nivel.
 
 ## 🗓️ Fechas del Viaje
 
-- **Inicio:** 23 de julio de 2025
-- **Fin:** 4 de agosto de 2025
+- **Inicio:** 23 de julio de 2026
+- **Fin:** 4 de agosto de 2026
 - **Duración:** 13 días
 
 ## 🚗 Itinerario Completo
@@ -228,7 +228,7 @@ Este proyecto web sirve como:
 #### Paso 1: Crear repositorio en GitHub
 
 1. Ir a [github.com](https://github.com) e iniciar sesión
-2. Crear un nuevo repositorio público (ej: `usa-trip-2025`)
+2. Crear un nuevo repositorio público (ej: `usa-trip-2026`)
 3. **No** inicializar el repositorio con README, .gitignore o licencia
 
 #### Paso 2: Subir el proyecto
