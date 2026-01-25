@@ -29,6 +29,41 @@ document.addEventListener('DOMContentLoaded', function () {
         iconAnchor: [15, 15]
     }) : null;
 
+    // Function to create numbered day icons
+    function createDayIcon(dayLabel, color, isMultiDay = false) {
+        if (typeof L === 'undefined') return null;
+        const size = isMultiDay ? 36 : 32;
+        return L.divIcon({
+            className: 'custom-day-icon',
+            html: `<div style='
+                background: linear-gradient(135deg, ${color} 0%, ${adjustColor(color, -20)} 100%); 
+                width: ${size}px; 
+                height: ${size}px; 
+                border-radius: 50%; 
+                border: 3px solid white; 
+                box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                font-size: ${isMultiDay ? '11px' : '12px'};
+                font-family: "Inter", sans-serif;
+            '>${dayLabel}</div>`,
+            iconSize: [size, size],
+            iconAnchor: [size / 2, size / 2]
+        });
+    }
+
+    // Helper function to darken/lighten color
+    function adjustColor(color, amount) {
+        const hex = color.replace('#', '');
+        const r = Math.max(0, Math.min(255, parseInt(hex.substring(0, 2), 16) + amount));
+        const g = Math.max(0, Math.min(255, parseInt(hex.substring(2, 4), 16) + amount));
+        const b = Math.max(0, Math.min(255, parseInt(hex.substring(4, 6), 16) + amount));
+        return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+    }
+
     // 1. Logic for Overview Map (index.html)
     const mapContainer = document.getElementById('map');
     if (mapContainer && typeof L !== 'undefined') {
@@ -40,28 +75,32 @@ document.addEventListener('DOMContentLoaded', function () {
             maxZoom: 19
         }).addTo(map);
 
+        // Locations with day numbers
         const locations = [
-            { name: "Boston (Inicio - Días 1-2)", coords: [42.3601, -71.0589], type: "city", color: "#2980b9" },
-            { name: "Albany (Día 3)", coords: [42.6526, -73.7562], type: "stop", color: "#7f8c8d" },
-            { name: "Cataratas del Niágara (Día 4)", coords: [43.0962, -79.0377], type: "nature", color: "#1abc9c" },
-            { name: "Cedar Point (Días 5-6)", coords: [41.4822, -82.6835], type: "park", color: "#e74c3c" },
-            { name: "Pittsburgh (Día 7)", coords: [40.4406, -79.9959], type: "city", color: "#f39c12" },
-            { name: "Lancaster (Día 8)", coords: [40.0379, -76.3055], type: "culture", color: "#d35400" },
-            { name: "Philadelphia (Día 9)", coords: [39.9526, -75.1652], type: "city", color: "#8e44ad" },
-            { name: "Nueva York (Días 10-12)", coords: [40.7128, -74.0060], type: "city", color: "#2c3e50" },
-            { name: "Newark (Fin - Día 13)", coords: [40.6895, -74.1745], type: "transport", color: "#34495e" }
+            { name: "Boston", days: "1-2", dayLabel: "1-2", coords: [42.3601, -71.0589], color: "#2980b9", description: "Llegada y exploración" },
+            { name: "Albany", days: "3", dayLabel: "3", coords: [42.6526, -73.7562], color: "#7f8c8d", description: "Ruta por los Berkshires" },
+            { name: "Cataratas del Niágara", days: "4", dayLabel: "4", coords: [43.0962, -79.0377], color: "#1abc9c", description: "Maravilla natural" },
+            { name: "Sandusky / Cedar Point", days: "5-6", dayLabel: "5-6", coords: [41.4822, -82.6835], color: "#e74c3c", description: "Capital de las montañas rusas" },
+            { name: "Pittsburgh", days: "7", dayLabel: "7", coords: [40.4406, -79.9959], color: "#f39c12", description: "La Ciudad de Acero" },
+            { name: "Lancaster", days: "8", dayLabel: "8", coords: [40.0379, -76.3055], color: "#d35400", description: "Territorio Amish" },
+            { name: "Philadelphia", days: "9", dayLabel: "9", coords: [39.9526, -75.1652], color: "#8e44ad", description: "Liberty Bell y más" },
+            { name: "Nueva York", days: "10-12", dayLabel: "10-12", coords: [40.7128, -74.0060], color: "#2c3e50", description: "La Gran Manzana" },
+            { name: "Newark", days: "13", dayLabel: "13", coords: [40.6895, -74.1745], color: "#34495e", description: "Vuelta a casa" }
         ];
 
         locations.forEach(loc => {
-            let icon;
-            if (loc.type === 'park') icon = parkIcon;
-            else if (loc.type === 'nature') icon = fallsIcon;
-            else if (loc.type === 'stop') icon = createIcon(loc.color, false);
-            else icon = createIcon(loc.color, true);
+            const isMultiDay = loc.dayLabel.includes('-');
+            const icon = createDayIcon(loc.dayLabel, loc.color, isMultiDay);
 
             L.marker(loc.coords, { icon: icon })
                 .addTo(map)
-                .bindPopup(`<b>${loc.name}</b>`);
+                .bindPopup(`
+                    <div style="text-align: center;">
+                        <strong style="font-size: 14px;">${loc.name}</strong><br>
+                        <span style="color: ${loc.color}; font-weight: bold;">Día ${loc.days}</span><br>
+                        <em style="color: #666; font-size: 12px;">${loc.description}</em>
+                    </div>
+                `);
         });
 
         const routeCoords = [
@@ -307,3 +346,25 @@ async function updateProgressBar(barContainer) {
         barContainer.appendChild(segment);
     });
 }
+
+// Mobile Menu Toggle Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link (especially on mobile)
+        const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
+});

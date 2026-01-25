@@ -14,6 +14,44 @@
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-flag-usa"></i>
+                <span>USA Trip 2026</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#home" class="nav-link">Inicio</a>
+                <a href="index.html#itinerario" class="nav-link">Itinerario</a>
+                <a href="budget.html" class="nav-link">Presupuesto</a>
+                <a href="recommendations.html" class="nav-link">Recomendaciones</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Más <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="day1.html" class="dropdown-item">Día 1: Boston Arrival</a>
+                        <a href="day2.html" class="dropdown-item">Día 2: Boston History</a>
+                        <a href="day3.html" class="dropdown-item">Día 3: Berkshires</a>
+                        <a href="day4.html" class="dropdown-item">Día 4: Niágara</a>
+                        <a href="day5.html" class="dropdown-item">Día 5: Lake Erie</a>
+                        <a href="day6.html" class="dropdown-item">Día 6: Cedar Point</a>
+                        <a href="day7.html" class="dropdown-item active">Día 7: Pittsburgh</a>
+                        <a href="day8.html" class="dropdown-item">Día 8: Amish Country</a>
+                        <a href="day9.html" class="dropdown-item">Día 9: Philly & NYC</a>
+                        <a href="day10.html" class="dropdown-item">Día 10: NYC Modern</a>
+                        <a href="day11.html" class="dropdown-item">Día 11: NYC Liberty</a>
+                        <a href="day12.html" class="dropdown-item">Día 12: NYC Central Park</a>
+                        <a href="day13.html" class="dropdown-item">Día 13: Farewell</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
     <header style="background: linear-gradient(135deg, #fbc02d 0%, #f57f17 100%);">
         <h1><i class="fas fa-city"></i> Día 7: Pittsburgh</h1>
         <p><i class="fas fa-calendar-day"></i> Miércoles, 4 de Agosto de 2026</p>
@@ -61,58 +99,26 @@
             </div>
 
             <div class="accommodation-section">
-                <h3><span class="day-date">4 Agosto</span> Alojamiento - Pittsburgh, PA</h3>
-                <p>Hotel en las afueras (zona aeropuerto) más económico y con parking gratuito.</p>
-                <ul>
-                    <li><strong>Check-in:</strong> 4 de Agosto</li>
-                    <li><strong>Check-out:</strong> 5 de Agosto (1 noche)</li>
-                </ul>
-
-                <div class="hotel-options" style="margin-top: 1rem;">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🏨 Opciones de Hotel</h4>
-
-                    <div class="info-card"
-                        style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 4px solid #4caf50; margin-bottom: 1rem;">
+                <h3><span class="day-date">4 Agosto</span> Alojamiento - Pittsburgh</h3>
+                <div class="info-card"
+                    style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 4px solid #4caf50; margin-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h4 style="margin: 0; color: #1b5e20;">La Quinta Inn Pittsburgh Airport</h4>
                         <span
-                            style="background: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">⭐
-                            RECOMENDADO</span>
-                        <h4 style="margin-top: 0.5rem;">La Quinta Inn Pittsburgh Airport</h4>
-                        <p><strong>Precio:</strong> ~$80/noche</p>
-                        <ul>
-                            <li>Shuttle aeropuerto gratuito 24h</li>
-                            <li>Desayuno continental incluido</li>
-                            <li>WiFi gratuito</li>
-                        </ul>
-                        <a href="https://www.wyndhamhotels.com/laquinta/pittsburgh-pennsylvania/la-quinta-pittsburgh-airport/overview"
-                            target="_blank"
-                            style="display: inline-block; background: #4caf50; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Wyndham.com
-                        </a>
+                            style="background: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">OPCIÓN
+                            RECOMENDADA</span>
                     </div>
-
-                    <div class="info-card"
-                        style="background: #fff3e0; border-left: 4px solid #ff9800; margin-bottom: 1rem;">
-                        <span
-                            style="background: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">💰
-                            ECONÓMICO</span>
-                        <h4 style="margin-top: 0.5rem;">Super 8 Pittsburgh Airport</h4>
-                        <p><strong>Precio:</strong> ~$65/noche</p>
-                        <ul>
-                            <li>El más económico de la zona</li>
-                            <li>Cerca de I-376</li>
-                        </ul>
-                        <a href="https://www.wyndhamhotels.com/super-8/pittsburgh-pennsylvania/super-8-pittsburgh-pa-airport-university-area/overview"
-                            target="_blank"
-                            style="display: inline-block; background: #ff9800; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Wyndham.com
-                        </a>
-                    </div>
-
-                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                        <i class="fas fa-info-circle"></i> <strong>Tip:</strong> Compara en <a
-                            href="https://www.booking.com/searchresults.html?ss=Pittsburgh+Airport"
-                            target="_blank">Booking.com</a>
-                    </p>
+                    <p style="margin: 0.5rem 0; color: #2e7d32;"><i class="fas fa-map-marker-alt"></i> Zona Aeropuerto -
+                        Pittsburgh, PA</p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; color: #1b5e20;">
+                        <li>Shuttle aeropuerto gratuito 24h</li>
+                        <li>Desayuno continental y WiFi incluidos</li>
+                    </ul>
+                    <a href="https://www.wyndhamhotels.com/laquinta/pittsburgh-pennsylvania/la-quinta-pittsburgh-airport/overview"
+                        target="_blank"
+                        style="display: inline-block; background: #4caf50; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem; font-size: 0.9rem;">
+                        <i class="fas fa-external-link-alt"></i> Ver Hotel
+                    </a>
                 </div>
             </div>
 

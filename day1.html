@@ -14,6 +14,44 @@
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-flag-usa"></i>
+                <span>USA Trip 2026</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#home" class="nav-link">Inicio</a>
+                <a href="index.html#itinerario" class="nav-link">Itinerario</a>
+                <a href="budget.html" class="nav-link">Presupuesto</a>
+                <a href="recommendations.html" class="nav-link">Recomendaciones</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Más <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="day1.html" class="dropdown-item active">Día 1: Boston Arrival</a>
+                        <a href="day2.html" class="dropdown-item">Día 2: Boston History</a>
+                        <a href="day3.html" class="dropdown-item">Día 3: Berkshires</a>
+                        <a href="day4.html" class="dropdown-item">Día 4: Niágara</a>
+                        <a href="day5.html" class="dropdown-item">Día 5: Lake Erie</a>
+                        <a href="day6.html" class="dropdown-item">Día 6: Cedar Point</a>
+                        <a href="day7.html" class="dropdown-item">Día 7: Pittsburgh</a>
+                        <a href="day8.html" class="dropdown-item">Día 8: Amish Country</a>
+                        <a href="day9.html" class="dropdown-item">Día 9: Philly & NYC</a>
+                        <a href="day10.html" class="dropdown-item">Día 10: NYC Modern</a>
+                        <a href="day11.html" class="dropdown-item">Día 11: NYC Liberty</a>
+                        <a href="day12.html" class="dropdown-item">Día 12: NYC Central Park</a>
+                        <a href="day13.html" class="dropdown-item">Día 13: Farewell</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
     <header>
         <h1><i class="fas fa-plane-arrival"></i> Día 1: El Aterrizaje</h1>
         <p><i class="fas fa-calendar-day"></i> Jueves 23 de Julio de 2026</p>
@@ -35,114 +73,119 @@
                 </ul>
             </div>
 
-            <div class="info-card" style="background:#e3f2fd; border-left:4px solid #2196f3; margin-bottom:1.5rem;">
-                <h3><i class="fas fa-taxi"></i> Transfer al Hotel</h3>
-                <p><strong>Sin coche por ahora</strong></p>
-                <p>Al no necesitar coche en Boston, iremos en taxi/Uber al hotel.</p>
-                <ul>
-                    <li><strong>Trayecto:</strong> Aeropuerto ➔ Hotel Canton/Braintree (~20-30 min)</li>
-                    <li><strong>Estimación:</strong> $40-$50</li>
-                </ul>
+            <div class="info-card" style="background:#f8f9fa; border-left:4px solid #34495e; margin-bottom:1.5rem;">
+                <h3><i class="fas fa-route"></i> ¿Cómo llegar al Hotel?</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                    <!-- Opción Transporte Público -->
+                    <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #dee2e6;">
+                        <h4 style="color: #007bff; margin-top: 0;"><i class="fas fa-subway"></i> Transporte Público</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 8px;"><strong>Logan Express o Combinado:</strong>
+                        </p>
+                        <ol style="font-size: 0.85rem; padding-left: 20px; color: #495057;">
+                            <li><strong>Logan Express (Framingham):</strong> Parada en <em>Waltham/Weston</em>. Es la
+                                forma más rápida desde el aeropuerto.</li>
+                            <li><strong>Uber/Lyft:</strong> Desde el aeropuerto es lo más cómodo al ser una zona
+                                residencial/negocios (~30-45 min).</li>
+                        </ol>
+                        <p style="font-size: 0.8rem; color: #6c757d;"><strong>Coste:</strong> ~$22 (Logan Exp) |
+                            <strong>Tiempo:</strong> ~40-50 min.
+                        </p>
+                    </div>
+
+                    <!-- Opción Coche de Alquiler -->
+                    <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #dee2e6;">
+                        <h4 style="color: #28a745; margin-top: 0;"><i class="fas fa-car"></i> Coche de Alquiler</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 8px;"><strong>Opción muy recomendada en
+                                Waltham:</strong></p>
+                        <p style="font-size: 0.85rem; color: #495057;">Waltham está a las afueras, disponer de coche
+                            desde el día 1 facilita mucho el movimiento.</p>
+                        <ul style="font-size: 0.85rem; padding-left: 20px; color: #495057;">
+                            <li><strong>Ruta:</strong> I-90 West (Mass Pike).</li>
+                            <li><strong>Parking:</strong> Gratis en Best Western Plus.</li>
+                        </ul>
+                        <p style="font-size: 0.8rem; color: #6c757d;"><strong>Estimación:</strong> ~$60-100/día |
+                            <strong>Tiempo:</strong> ~25-35 min.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <h3><i class="fas fa-map"></i> Ubicación</h3>
             <div class="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d94380.0950334706!2d-71.13789069632876!3d42.35541604565451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89e37014d5da4937%3A0xc9394c43a02a5351!2sLogan%20International%20Airport!3m2!1d42.3656132!2d-71.0095602!4m5!1s0x89e483b8b8b8b8b9%3A0x8b8b8b8b8b8b8b8b!2sCanton%2C%20Massachusetts!3m2!1d42.1584323!2d-71.1447732!5e0!3m2!1ses!2ses"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.337777174668!2d-71.2647754238914!3d42.39925237119047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3831818181819%3A0x8888888888888888!2s380%20Winter%20St%2C%20Waltham%2C%20MA%2002451%2C%20EE.%20UU.!5e0!3m2!1ses!2ses"
                     width="100%" height="400" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
 
             <div class="accommodation-section">
-                <h3><span class="day-date">29 Julio</span> Alojamiento - Zona Canton/Braintree</h3>
-                <p>Ubicación estratégica al sur de Boston con fácil acceso al metro Red Line.</p>
-                <ul>
-                    <li><strong>Check-in:</strong> 29 de Julio</li>
-                    <li><strong>Check-out:</strong> 31 de Julio (2 noches)</li>
-                </ul>
-
-                <div class="hotel-options" style="margin-top: 1.5rem;">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🏨 Opciones de Hotel</h4>
-
-                    <!-- Opción Recomendada -->
-                    <div class="info-card"
-                        style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 4px solid #4caf50; margin-bottom: 1rem;">
+                <h3><span class="day-date">29 Julio</span> Alojamiento - Reserva Confirmada</h3>
+                <div class="hotel-confirmed-card"
+                    style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 5px solid #2196f3; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 1.5rem 0;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.4rem; color: #1565c0;">Best Western Plus Waltham Boston
+                            </h4>
+                            <p style="margin: 0.3rem 0; color: #546e7a;"><i class="fas fa-map-marker-alt"></i> 380
+                                Winter Street, Waltham, MA 02451</p>
+                        </div>
                         <span
-                            style="background: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">⭐
-                            RECOMENDADO</span>
-                        <h4 style="margin-top: 0.5rem;">Hyatt Place Boston/Braintree</h4>
-                        <p><strong>Precio:</strong> ~$113/noche (~$226 total 2 noches)</p>
-                        <ul>
-                            <li>A 5 min del metro Braintree (Red Line directo a Boston)</li>
-                            <li>Desayuno incluido</li>
-                            <li>Piscina y fitness center</li>
-                        </ul>
-                        <a href="https://www.hyatt.com/hyatt-place/en-US/boszb-hyatt-place-boston-braintree"
+                            style="background: #2196f3; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase;">Reserva
+                            OK</span>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+                        <div style="background: rgba(255,255,255,0.5); padding: 0.8rem; border-radius: 8px;">
+                            <small
+                                style="display: block; color: #1565c0; font-weight: bold; text-transform: uppercase; font-size: 0.7rem;">Entrada
+                                (Check-in)</small>
+                            <div style="font-weight: 600;">29 Jul, 2026</div>
+                            <small>Desde las 15:00</small>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.5); padding: 0.8rem; border-radius: 8px;">
+                            <small
+                                style="display: block; color: #1565c0; font-weight: bold; text-transform: uppercase; font-size: 0.7rem;">Salida
+                                (Check-out)</small>
+                            <div style="font-weight: 600;">31 Jul, 2026</div>
+                            <small>Hasta 11:00</small>
+                        </div>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: #37474f;">
+                        <li style="margin-bottom: 0.4rem;"><i class="fas fa-bed"
+                                style="color: #2196f3; width: 20px;"></i> 2 camas dobles | Adaptada</li>
+                        <li style="margin-bottom: 0.4rem;"><i class="fas fa-coffee"
+                                style="color: #2196f3; width: 20px;"></i> Desayuno continental incluido</li>
+                        <li style="margin-bottom: 0.4rem;"><i class="fas fa-phone"
+                                style="color: #2196f3; width: 20px;"></i> +1 781-890-7800</li>
+                    </ul>
+
+                    <div style="display: flex; gap: 10px;">
+                        <a href="Hoteles/Boston1-2-3.pdf" target="_blank"
+                            style="flex: 1; text-align: center; background: #1565c0; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 500; display: inline-block;">
+                            <i class="fas fa-file-pdf"></i> Ver Comprobante
+                        </a>
+                        <a href="https://www.bestwestern.com/en_US/book/hotels-in-waltham/best-western-plus-waltham-boston/propertyCode.22051.html"
                             target="_blank"
-                            style="display: inline-block; background: #4caf50; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Hyatt.com
+                            style="flex: 1; text-align: center; background: white; color: #1565c0; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 500; border: 1px solid #1565c0;">
+                            <i class="fas fa-external-link-alt"></i> Web Hotel
                         </a>
                     </div>
-
-                    <!-- Opción Económica -->
-                    <div class="info-card"
-                        style="background: #fff3e0; border-left: 4px solid #ff9800; margin-bottom: 1rem;">
-                        <span
-                            style="background: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">💰
-                            ECONÓMICO</span>
-                        <h4 style="margin-top: 0.5rem;">Hampton Inn Boston/Braintree</h4>
-                        <p><strong>Precio:</strong> ~$95/noche (~$190 total 2 noches)</p>
-                        <ul>
-                            <li>Excelente relación calidad-precio</li>
-                            <li>Desayuno incluido</li>
-                            <li>Parking gratuito</li>
-                        </ul>
-                        <a href="https://www.hilton.com/en/hotels/bosbtma-hampton-boston-braintree/" target="_blank"
-                            style="display: inline-block; background: #ff9800; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Hilton.com
-                        </a>
-                    </div>
-
-                    <!-- Opción Premium -->
-                    <div class="info-card"
-                        style="background: #e3f2fd; border-left: 4px solid #2196f3; margin-bottom: 1rem;">
-                        <span
-                            style="background: #2196f3; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">🌟
-                            SUITES</span>
-                        <h4 style="margin-top: 0.5rem;">Homewood Suites by Hilton Boston/Canton</h4>
-                        <p><strong>Precio:</strong> ~$142/noche (~$284 total 2 noches)</p>
-                        <ul>
-                            <li>Suites con cocina completa</li>
-                            <li>Ideal para familias</li>
-                            <li>Desayuno caliente incluido</li>
-                        </ul>
-                        <a href="https://www.hilton.com/en/hotels/bosctma-homewood-suites-boston-canton/"
-                            target="_blank"
-                            style="display: inline-block; background: #2196f3; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Hilton.com
-                        </a>
-                    </div>
-
-                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                        <i class="fas fa-info-circle"></i> <strong>Tip:</strong> Reserva en <a
-                            href="https://www.booking.com/searchresults.html?ss=Braintree%2C+Massachusetts"
-                            target="_blank">Booking.com</a>
-                        o <a href="https://www.hotels.com/search/search.html?destination=Braintree%2C+MA"
-                            target="_blank">Hotels.com</a> para comparar precios y ver ofertas.
-                    </p>
                 </div>
             </div>
 
             <div class="expenses-section">
-                <h3><i class="fas fa-dollar-sign"></i> Gastos Estimados (Día 1)</h3>
+                <h3><i class="fas fa-dollar-sign"></i> Gastos Reales (Día 1)</h3>
                 <ul>
-                    <li><strong>Taxi/Uber aeropuerto:</strong> $50</li>
-                    <li><strong>Hotel (Hyatt Place):</strong> $113/noche</li>
-                    <li><strong>Cena:</strong> $30</li>
-                    <li><strong>Total día:</strong> ~$193</li>
+                    <li><strong>Hotel (Total 2 noches con imp.):</strong> $332,87</li>
+                    <li><strong>Transporte/Uber:</strong> $50 (est.)</li>
+                    <li><strong>Cena:</strong> $30 (est.)</li>
+                    <li><strong>Total inicial:</strong> $412,87</li>
                 </ul>
-                <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
-                    <i class="fas fa-info-circle"></i> El hotel cubre 2 noches (~$226 total). Desayuno incluido.
+                <p
+                    style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; border-top: 1px solid #eee; padding-top: 0.5rem;">
+                    <i class="fas fa-info-circle"></i> Hotel en Waltham. Desayuno incluido.
                 </p>
             </div>
 

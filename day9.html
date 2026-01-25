@@ -14,6 +14,44 @@
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-flag-usa"></i>
+                <span>USA Trip 2026</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#home" class="nav-link">Inicio</a>
+                <a href="index.html#itinerario" class="nav-link">Itinerario</a>
+                <a href="budget.html" class="nav-link">Presupuesto</a>
+                <a href="recommendations.html" class="nav-link">Recomendaciones</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Más <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="day1.html" class="dropdown-item">Día 1: Boston Arrival</a>
+                        <a href="day2.html" class="dropdown-item">Día 2: Boston History</a>
+                        <a href="day3.html" class="dropdown-item">Día 3: Berkshires</a>
+                        <a href="day4.html" class="dropdown-item">Día 4: Niágara</a>
+                        <a href="day5.html" class="dropdown-item">Día 5: Lake Erie</a>
+                        <a href="day6.html" class="dropdown-item">Día 6: Cedar Point</a>
+                        <a href="day7.html" class="dropdown-item">Día 7: Pittsburgh</a>
+                        <a href="day8.html" class="dropdown-item">Día 8: Amish Country</a>
+                        <a href="day9.html" class="dropdown-item active">Día 9: Philly & NYC</a>
+                        <a href="day10.html" class="dropdown-item">Día 10: NYC Modern</a>
+                        <a href="day11.html" class="dropdown-item">Día 11: NYC Liberty</a>
+                        <a href="day12.html" class="dropdown-item">Día 12: NYC Central Park</a>
+                        <a href="day13.html" class="dropdown-item">Día 13: Farewell</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
     <header style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);">
         <h1><i class="fas fa-history"></i> Día 9: Philly y NYC</h1>
         <p><i class="fas fa-calendar-day"></i> Jueves, 6 de Agosto de 2026</p>
@@ -65,77 +103,25 @@
             <div class="accommodation-section">
                 <h3><i class="fas fa-bed"></i> <span class="day-date">6 Agosto</span> Alojamiento - NYC Area (4 noches)
                 </h3>
-                <p>Weehawken (NJ) o Long Island City (Queens) ofrecen acceso rápido a Manhattan por la mitad de precio.
-                </p>
-                <ul>
-                    <li><strong>Check-in:</strong> 6 de Agosto</li>
-                    <li><strong>Check-out:</strong> 10 de Agosto (4 noches)</li>
-                </ul>
-
-                <div class="hotel-options" style="margin-top: 1rem;">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🏨 Opciones de Hotel</h4>
-
-                    <div class="info-card"
-                        style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 4px solid #4caf50; margin-bottom: 1rem;">
+                <div class="info-card"
+                    style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 4px solid #2196f3; margin-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h4 style="margin: 0; color: #0d47a1;">Hyatt Place Long Island City</h4>
                         <span
-                            style="background: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">⭐
-                            MEJOR VALOR NYC</span>
-                        <h4 style="margin-top: 0.5rem;">Hyatt Place Long Island City</h4>
-                        <p><strong>Precio:</strong> ~$160-$180/noche (~$680 total 4 noches)</p>
-                        <ul>
-                            <li>🚇 Metro directo a Manhattan (15 min)</li>
-                            <li>Rating 9.2/10</li>
-                            <li>Desayuno y WiFi incluidos</li>
-                        </ul>
-                        <a href="https://www.hyatt.com/hyatt-place/en-US/nycli-hyatt-place-long-island-city-new-york-city"
-                            target="_blank"
-                            style="display: inline-block; background: #4caf50; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Hyatt.com
-                        </a>
+                            style="background: #2196f3; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">OPCIÓN
+                            RECOMENDADA</span>
                     </div>
-
-                    <div class="info-card"
-                        style="background: #e3f2fd; border-left: 4px solid #2196f3; margin-bottom: 1rem;">
-                        <span
-                            style="background: #2196f3; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">🌃
-                            VISTAS MANHATTAN</span>
-                        <h4 style="margin-top: 0.5rem;">Residence Inn Weehawken (NJ)</h4>
-                        <p><strong>Precio:</strong> ~$180-$200/noche (~$760 total)</p>
-                        <ul>
-                            <li>🚢 Ferry 6 min a NYC (NY Waterway)</li>
-                            <li>Rating 9.0/10, cocina en habitación</li>
-                            <li>Desayuno incluido, rooftop con vistas</li>
-                        </ul>
-                        <a href="https://www.marriott.com/en-us/hotels/ewrwh-residence-inn-weehawken/overview/"
-                            target="_blank"
-                            style="display: inline-block; background: #2196f3; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Marriott.com
-                        </a>
-                    </div>
-
-                    <div class="info-card"
-                        style="background: #fff3e0; border-left: 4px solid #ff9800; margin-bottom: 1rem;">
-                        <span
-                            style="background: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">💰
-                            ECONÓMICO</span>
-                        <h4 style="margin-top: 0.5rem;">LIC Plaza Hotel (Queens)</h4>
-                        <p><strong>Precio:</strong> ~$130-$150/noche (~$560 total)</p>
-                        <ul>
-                            <li>Muy cerca del metro</li>
-                            <li>Desayuno continental y shuttle</li>
-                        </ul>
-                        <a href="https://www.booking.com/hotel/us/lic-plaza.html" target="_blank"
-                            style="display: inline-block; background: #ff9800; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
-                            <i class="fas fa-external-link-alt"></i> Ver en Booking.com
-                        </a>
-                    </div>
-
-                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                        <i class="fas fa-info-circle"></i> <strong>Tip:</strong> Agosto es temporada alta en NYC.
-                        Reserva con antelación en <a
-                            href="https://www.booking.com/searchresults.html?ss=Long+Island+City%2C+New+York"
-                            target="_blank">Booking.com</a>
-                    </p>
+                    <p style="margin: 0.5rem 0; color: #1565c0;"><i class="fas fa-map-marker-alt"></i> Long Island City,
+                        Queens - A 15 min de Manhattan</p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; color: #0d47a1;">
+                        <li>🚇 Metro directo a Manhattan (15 min)</li>
+                        <li>Desayuno y WiFi incluidos</li>
+                    </ul>
+                    <a href="https://www.hyatt.com/hyatt-place/en-US/nycli-hyatt-place-long-island-city-new-york-city"
+                        target="_blank"
+                        style="display: inline-block; background: #2196f3; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; margin-top: 0.5rem; font-size: 0.9rem;">
+                        <i class="fas fa-external-link-alt"></i> Ver Hotel
+                    </a>
                 </div>
             </div>
 
